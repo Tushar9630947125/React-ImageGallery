@@ -28,17 +28,23 @@ const Details = () => {
     <>
       <div className="text-center text-5xl p-6 shadow-md ">
         <Link to={`/`}>Back to Home</Link>
-      </div>
-      <div key={id} className="  flex   items-center w-[80%] m-auto  gap-5 shadow-lg bg-blue-900 mt-10" >
-        <div className="  pl-8 pt-8 pb-8  shadow-2xl ">
+      </div> <br /> <br />
+      <div className="p-16" key={id}>
+      <div  className="  bg-blue-900 max-w-md  mx-auto  rounded-xl shadow-md overflow-hidden md:max-w-4xl " >
+        <div className="md:flex">        
+          <div className="  md:shrink-0 ">
           {" "}
-          <img className="max-w-96  rounded-xl shadow-2xl " src={state.url} alt={state.title} />
+          <img className="h-48 w-full object-cover md:h-full md:w-60 " src={state.url} alt={state.title} />
         </div>
-        <div className="px-10 ">
-        <h1 className="text-5xl text-white leading-tight	">{state.title}</h1> <br /><br />
-        <h2 className="text-2xl text-white pr-32">{state.description}</h2>
+        <div className="px-8 py-16">
+          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        <h1 className="block mt-1 text-lg leading-tight font-medium text-white   hover:underline	">{state.title}</h1> <br /><br />
+        <h2 className="mt-2 text-white">{state.description}</h2>
         </div>
-       
+        </div>
+        </div>
+
+      </div>
       </div>
     </>
   );

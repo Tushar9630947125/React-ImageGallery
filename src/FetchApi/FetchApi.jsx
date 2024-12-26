@@ -25,7 +25,7 @@ const FetchApi = () => {
   <div className=''>
     <h1 className='text-center text-5xl shadow-md p-5 '>Home</h1>
   </div>
-    <div className='flex flex-wrap gap-10 p-20  '>
+    <div className='flex items-center justify-center md:justify-center md:items-center flex-wrap md:flex-wrap  gap-10 p-20  '>
        {state.map((e)=>{
         console.log(e)
         return <ImageCard  key={e.id}  url={e.url} id={e.id} />
